@@ -4,18 +4,13 @@
   import { beforeNavigate, goto } from "$app/navigation";
 
   import { keybind } from "$lib/actions/keybind";
-  import { tooltip } from "$lib/actions/tooltip";
   import { resize } from "$lib/actions/resize";
   import { initWindowMessages, sendResizeMessage } from "$lib/playback/messages";
   import { playbackError, playbackState } from "$lib/playback/stores";
 
-  import Gameboard from "$lib/components/Gameboard.svelte";
-  import Scoreboard from "$lib/components/Scoreboard.svelte";
   import TooltipTemplateHotkeys from "$lib/components/TooltipTemplateHotkeys.svelte";
   import TooltipTemplateSettings from "$lib/components/TooltipTemplateSettings.svelte";
-
-  import IconCog from "~icons/heroicons/cog-8-tooth";
-  import IconHelp from "~icons/heroicons/question-mark-circle";
+  import Frame from "$lib/components/Frame.svelte";
 
   import { getDefaultSettings, loadSettingsWithURLOverrides } from "$lib/settings/stores";
   import { setTheme } from "$lib/theme";
@@ -37,7 +32,6 @@
   };
 
   beforeNavigate(async () => {
-    playbackState.controls.pause();
     playbackState.reset();
   });
 
@@ -60,7 +54,7 @@
 
     if (settings.game.length > 0 && settings.engine.length > 0) {
       settingError = false;
-      playbackState.load(settings);
+      playbackState.load();
       initWindowMessages();
     }
   });
@@ -85,33 +79,10 @@
   {:else if $playbackState}
     <TooltipTemplateHotkeys id={helpTooltipOptions.templateId} />
     <TooltipTemplateSettings id={settingsTooltipOptions.templateId} {settings} />
-    <div class="w-full h-full flex flex-col" style="max-width:300px; background:#f1f1f1">
-      {#if settings.showScoreboard}
-        <div class="basis-[45%] order-first p-2">
-          <Scoreboard />
-        </div>
-      {/if}
-      <div class="flex flex-col grow">
-        {#if settings.title}
-          <h1 class="text-center font-bold pt-2 text-lg">{settings.title}</h1>
-        {/if}
-        <Gameboard showCoordinates={settings.showCoords} />
-        {#if settings.showControls}
-          <div class="flex justify-evenly text-xl py-2 px-6">
-            <div use:tooltip={helpTooltipOptions}>
-              <IconHelp />
-            </div>
-            <div use:tooltip={settingsTooltipOptions}>
-              <a href="/settings">
-                <IconCog />
-              </a>
-            </div>
-          </div>
-        {/if}
-      </div>
-
-    </div>
-
+    <Frame showScoreboard={settings.showScoreboard}
+           showCoordinates={settings.showCoords}
+           frame={$playbackState.frame}
+           visible={true}/>
   {:else}
     <p class="p-4 text-lg text-center">Loading game...</p>
   {/if}

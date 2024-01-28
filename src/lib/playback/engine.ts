@@ -1,4 +1,4 @@
-import { JsonToFrame, type Frame } from "./types";
+import { jsonToFrame, type Frame } from "./types";
 import requestInfo from "./move.json";
 
 type FrameCallback = (frame: Frame) => void;
@@ -13,6 +13,6 @@ export function httpToWsProtocol(url: string) {
 export function fetchGameFromJson(
   onFrameLoad: FrameCallback,
 ) {
-  const frame = JsonToFrame(requestInfo);
+  const frame = jsonToFrame(requestInfo);
   onFrameLoad(frame);
 }

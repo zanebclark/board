@@ -1,96 +1,3137 @@
 {
   "game": {
-    "id": "totally-unique-game-id",
+    "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
     "ruleset": {
       "name": "standard",
       "version": "v1.1.15",
       "settings": {
         "foodSpawnChance": 15,
         "minimumFood": 1,
-        "hazardDamagePerTurn": 14
+        "hazardDamagePerTurn": 14,
+        "royale": null
       }
     },
     "map": "standard",
-    "source": "league",
-    "timeout": 500
+    "timeout": 500,
+    "source": "custom"
   },
-  "turn": 14,
+  "turn": 0,
   "board": {
     "height": 11,
     "width": 11,
-    "food": [
-      {"x": 5, "y": 5},
-      {"x": 9, "y": 0},
-      {"x": 2, "y": 6},
-      {"x": 2, "y": 2}
-    ],
-    "hazards": [
-      {"x": 3, "y": 2}
-    ],
+    "food": [],
+    "hazards": [],
     "snakes": [
       {
-        "id": "snake-508e96ac-94ad-11ea-bb37",
-        "name": "My Snake",
-        "health": 54,
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 89,
         "body": [
-          {"x": 0, "y": 0},
-          {"x": 1, "y": 0},
-          {"x": 2, "y": 0},
-          {"x": 3, "y": 0},
-          {"x": 4, "y": 0},
-          {"x": 5, "y": 0},
-          {"x": 6, "y": 0},
-          {"x": 7, "y": 0}
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          },
+          {
+            "x": 0,
+            "y": 8
+          }
         ],
-        "latency": "111",
-        "head": {"x": 0, "y": 0},
+        "latency": "456",
         "length": 3,
-        "shout": "why are we shouting??",
-        "customizations":{
-          "color":"#FF0000",
-          "head":"pixel",
-          "tail":"pixel"
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
         }
       },
       {
-        "id": "snake-b67f4906-94ae-11ea-bb37",
-        "name": "Another Snake",
-        "health": 16,
+        "id": "Sidecar",
+        "name": "Sidecar",
+        "health": 64,
         "body": [
-          {"x": 5, "y": 4},
-          {"x": 5, "y": 3},
-          {"x": 6, "y": 3},
-          {"x": 6, "y": 2}
+          {
+            "x": 1,
+            "y": 9
+          },
+          {
+            "x": 1,
+            "y": 8
+          },
+          {
+            "x": 1,
+            "y": 7
+          }
         ],
-        "latency": "222",
-        "head": {"x": 5, "y": 4},
-        "length": 4,
-        "shout": "I'm not really sure...",
-        "customizations":{
-          "color":"#26CF04",
-          "head":"silly",
-          "tail":"curled"
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      {
+        "id": "SecondSidecar",
+        "name": "SecondSidecar",
+        "health": 64,
+        "body": [
+          {
+            "x": 2,
+            "y": 10
+          },
+          {
+            "x": 2,
+            "y": 9
+          },
+          {
+            "x": 2,
+            "y": 8
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      {
+        "id": "Rando",
+        "name": "Rando",
+        "health": 64,
+        "body": [
+          {
+            "x": 8,
+            "y": 1
+          },
+          {
+            "x": 9,
+            "y": 1
+          },
+          {
+            "x": 10,
+            "y": 1
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
         }
       }
     ]
   },
   "you": {
-    "id": "snake-508e96ac-94ad-11ea-bb37",
-    "name": "My Snake",
-    "health": 54,
+    "id": "Up -> Right",
+    "name": "Up -> Right",
+    "health": 89,
     "body": [
-      {"x": 0, "y": 0},
-      {"x": 1, "y": 0},
-      {"x": 2, "y": 0}
+      {
+        "x": 0,
+        "y": 10
+      },
+      {
+        "x": 0,
+        "y": 9
+      },
+      {
+        "x": 0,
+        "y": 8
+      }
     ],
-    "latency": "111",
-    "head": {"x": 0, "y": 0},
+    "latency": "456",
     "length": 3,
-    "shout": "why are we shouting??",
     "customizations": {
-      "color":"#FF0000",
-      "head":"pixel",
-      "tail":"pixel"
+      "color": "#888888",
+      "head": "default",
+      "tail": "default"
     }
-  }
+  },
+  "descendents": [
+    {
+      "game": {
+        "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+        "ruleset": {
+          "name": "standard",
+          "version": "v1.1.15",
+          "settings": {
+            "foodSpawnChance": 15,
+            "minimumFood": 1,
+            "hazardDamagePerTurn": 14,
+            "royale": null
+          }
+        },
+        "map": "standard",
+        "timeout": 500,
+        "source": "custom"
+      },
+      "turn": 1,
+      "board": {
+        "height": 11,
+        "width": 11,
+        "food": [],
+        "hazards": [],
+        "snakes": [
+          {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 88,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Sidecar",
+            "name": "Sidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 1,
+                "y": 9
+              },
+              {
+                "x": 1,
+                "y": 8
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "SecondSidecar",
+            "name": "SecondSidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Rando",
+            "name": "Rando",
+            "health": 63,
+            "body": [
+              {
+                "x": 8,
+                "y": 2
+              },
+              {
+                "x": 8,
+                "y": 1
+              },
+              {
+                "x": 9,
+                "y": 1
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          }
+        ]
+      },
+      "you": {
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 88,
+        "body": [
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      "descendents": [
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 8,
+                    "y": 3
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 9,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        }
+      ]
+    },
+    {
+      "game": {
+        "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+        "ruleset": {
+          "name": "standard",
+          "version": "v1.1.15",
+          "settings": {
+            "foodSpawnChance": 15,
+            "minimumFood": 1,
+            "hazardDamagePerTurn": 14,
+            "royale": null
+          }
+        },
+        "map": "standard",
+        "timeout": 500,
+        "source": "custom"
+      },
+      "turn": 1,
+      "board": {
+        "height": 11,
+        "width": 11,
+        "food": [],
+        "hazards": [],
+        "snakes": [
+          {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 88,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Sidecar",
+            "name": "Sidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 1,
+                "y": 9
+              },
+              {
+                "x": 1,
+                "y": 8
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "SecondSidecar",
+            "name": "SecondSidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Rando",
+            "name": "Rando",
+            "health": 63,
+            "body": [
+              {
+                "x": 8,
+                "y": 0
+              },
+              {
+                "x": 8,
+                "y": 1
+              },
+              {
+                "x": 9,
+                "y": 1
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          }
+        ]
+      },
+      "you": {
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 88,
+        "body": [
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      "descendents": [
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 9,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        }
+      ]
+    },
+    {
+      "game": {
+        "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+        "ruleset": {
+          "name": "standard",
+          "version": "v1.1.15",
+          "settings": {
+            "foodSpawnChance": 15,
+            "minimumFood": 1,
+            "hazardDamagePerTurn": 14,
+            "royale": null
+          }
+        },
+        "map": "standard",
+        "timeout": 500,
+        "source": "custom"
+      },
+      "turn": 1,
+      "board": {
+        "height": 11,
+        "width": 11,
+        "food": [],
+        "hazards": [],
+        "snakes": [
+          {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 88,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Sidecar",
+            "name": "Sidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 1,
+                "y": 9
+              },
+              {
+                "x": 1,
+                "y": 8
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "SecondSidecar",
+            "name": "SecondSidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Rando",
+            "name": "Rando",
+            "health": 63,
+            "body": [
+              {
+                "x": 7,
+                "y": 1
+              },
+              {
+                "x": 8,
+                "y": 1
+              },
+              {
+                "x": 9,
+                "y": 1
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          }
+        ]
+      },
+      "you": {
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 88,
+        "body": [
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      "descendents": [
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 2
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 0
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 6,
+                    "y": 1
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        }
+      ]
+    },
+    {
+      "game": {
+        "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+        "ruleset": {
+          "name": "standard",
+          "version": "v1.1.15",
+          "settings": {
+            "foodSpawnChance": 15,
+            "minimumFood": 1,
+            "hazardDamagePerTurn": 14,
+            "royale": null
+          }
+        },
+        "map": "standard",
+        "timeout": 500,
+        "source": "custom"
+      },
+      "turn": 1,
+      "board": {
+        "height": 11,
+        "width": 11,
+        "food": [],
+        "hazards": [],
+        "snakes": [
+          {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 88,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Sidecar",
+            "name": "Sidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 1,
+                "y": 9
+              },
+              {
+                "x": 1,
+                "y": 8
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "SecondSidecar",
+            "name": "SecondSidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 3,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Rando",
+            "name": "Rando",
+            "health": 63,
+            "body": [
+              {
+                "x": 8,
+                "y": 2
+              },
+              {
+                "x": 8,
+                "y": 1
+              },
+              {
+                "x": 9,
+                "y": 1
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          }
+        ]
+      },
+      "you": {
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 88,
+        "body": [
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      "descendents": [
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 8,
+                    "y": 3
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 9,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 8,
+                    "y": 3
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 9,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 2
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        }
+      ]
+    },
+    {
+      "game": {
+        "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+        "ruleset": {
+          "name": "standard",
+          "version": "v1.1.15",
+          "settings": {
+            "foodSpawnChance": 15,
+            "minimumFood": 1,
+            "hazardDamagePerTurn": 14,
+            "royale": null
+          }
+        },
+        "map": "standard",
+        "timeout": 500,
+        "source": "custom"
+      },
+      "turn": 1,
+      "board": {
+        "height": 11,
+        "width": 11,
+        "food": [],
+        "hazards": [],
+        "snakes": [
+          {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 88,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Sidecar",
+            "name": "Sidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 1,
+                "y": 9
+              },
+              {
+                "x": 1,
+                "y": 8
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "SecondSidecar",
+            "name": "SecondSidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 3,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Rando",
+            "name": "Rando",
+            "health": 63,
+            "body": [
+              {
+                "x": 8,
+                "y": 0
+              },
+              {
+                "x": 8,
+                "y": 1
+              },
+              {
+                "x": 9,
+                "y": 1
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          }
+        ]
+      },
+      "you": {
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 88,
+        "body": [
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      "descendents": [
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 9,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 9,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        }
+      ]
+    },
+    {
+      "game": {
+        "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+        "ruleset": {
+          "name": "standard",
+          "version": "v1.1.15",
+          "settings": {
+            "foodSpawnChance": 15,
+            "minimumFood": 1,
+            "hazardDamagePerTurn": 14,
+            "royale": null
+          }
+        },
+        "map": "standard",
+        "timeout": 500,
+        "source": "custom"
+      },
+      "turn": 1,
+      "board": {
+        "height": 11,
+        "width": 11,
+        "food": [],
+        "hazards": [],
+        "snakes": [
+          {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 88,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Sidecar",
+            "name": "Sidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 1,
+                "y": 10
+              },
+              {
+                "x": 1,
+                "y": 9
+              },
+              {
+                "x": 1,
+                "y": 8
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "SecondSidecar",
+            "name": "SecondSidecar",
+            "health": 63,
+            "body": [
+              {
+                "x": 3,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 10
+              },
+              {
+                "x": 2,
+                "y": 9
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          {
+            "id": "Rando",
+            "name": "Rando",
+            "health": 63,
+            "body": [
+              {
+                "x": 7,
+                "y": 1
+              },
+              {
+                "x": 8,
+                "y": 1
+              },
+              {
+                "x": 9,
+                "y": 1
+              }
+            ],
+            "latency": "456",
+            "length": 3,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          }
+        ]
+      },
+      "you": {
+        "id": "Up -> Right",
+        "name": "Up -> Right",
+        "health": 88,
+        "body": [
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 0,
+            "y": 9
+          }
+        ],
+        "latency": "456",
+        "length": 3,
+        "customizations": {
+          "color": "#888888",
+          "head": "default",
+          "tail": "default"
+        }
+      },
+      "descendents": [
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 2
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 0
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 3,
+                    "y": 9
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 6,
+                    "y": 1
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 2
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 7,
+                    "y": 0
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        },
+        {
+          "game": {
+            "id": "713d28ee-31e0-4281-91dd-abb0a3101877",
+            "ruleset": {
+              "name": "standard",
+              "version": "v1.1.15",
+              "settings": {
+                "foodSpawnChance": 15,
+                "minimumFood": 1,
+                "hazardDamagePerTurn": 14,
+                "royale": null
+              }
+            },
+            "map": "standard",
+            "timeout": 500,
+            "source": "custom"
+          },
+          "turn": 2,
+          "board": {
+            "height": 11,
+            "width": 11,
+            "food": [],
+            "hazards": [],
+            "snakes": [
+              {
+                "id": "SecondSidecar",
+                "name": "SecondSidecar",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 4,
+                    "y": 10
+                  },
+                  {
+                    "x": 3,
+                    "y": 10
+                  },
+                  {
+                    "x": 2,
+                    "y": 10
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              },
+              {
+                "id": "Rando",
+                "name": "Rando",
+                "health": 62,
+                "body": [
+                  {
+                    "x": 6,
+                    "y": 1
+                  },
+                  {
+                    "x": 7,
+                    "y": 1
+                  },
+                  {
+                    "x": 8,
+                    "y": 1
+                  }
+                ],
+                "latency": "456",
+                "length": 3,
+                "customizations": {
+                  "color": "#888888",
+                  "head": "default",
+                  "tail": "default"
+                }
+              }
+            ]
+          },
+          "you": {
+            "id": "Up -> Right",
+            "name": "Up -> Right",
+            "health": 0,
+            "body": [],
+            "latency": 0,
+            "length": 0,
+            "customizations": {
+              "color": "#888888",
+              "head": "default",
+              "tail": "default"
+            }
+          },
+          "descendents": []
+        }
+      ]
+    }
+  ]
 }

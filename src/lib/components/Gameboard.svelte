@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { playbackState } from "$lib/playback/stores";
-  import { highlightedSnakeID } from "$lib/highlight";
+  import type { Frame } from "$lib/playback/types";
   import type { SvgCalcParams } from "$lib/svg";
 
   import SvgHazard from "./SvgHazard.svelte";
@@ -13,19 +12,15 @@
   const CELL_SIZE_HALF = CELL_SIZE / 2;
   const CELL_SPACING = 4;
   const GRID_BORDER = 10;
-
+  export let frame: Frame;
   export let showCoordinates: boolean;
-
-  $: svgWidth = $playbackState
-    ? 2 * GRID_BORDER +
-    $playbackState.frame.width * CELL_SIZE +
-    Math.max($playbackState.frame.width - 1, 0) * CELL_SPACING
-    : 0;
-  $: svgHeight = $playbackState
-    ? 2 * GRID_BORDER +
-    $playbackState.frame.height * CELL_SIZE +
-    Math.max($playbackState.frame.height - 1, 0) * CELL_SPACING
-    : 0;
+  export let highlightedSnakeID: string | null = null;
+  $: svgWidth = 2 * GRID_BORDER +
+    frame.width * CELL_SIZE +
+    Math.max(frame.width - 1, 0) * CELL_SPACING;
+  $: svgHeight = 2 * GRID_BORDER +
+    frame.height * CELL_SIZE +
+    Math.max(frame.height - 1, 0) * CELL_SPACING;
 
   $: svgCalcParams = {
     cellSize: CELL_SIZE,
@@ -37,44 +32,42 @@
   } as SvgCalcParams;
 </script>
 
-{#if $playbackState}
-  <svg class="gameboard flex-shrink" viewBox="0 0 {svgWidth} {svgHeight}">
-    <!-- Grid -->
-    <SvgGrid
-      gridWidth={$playbackState.frame.width}
-      gridHeight={$playbackState.frame.height}
-      showLabels={showCoordinates}
-      {svgCalcParams}
-    />
+<svg class="gameboard flex-shrink" viewBox="0 0 {svgWidth} {svgHeight}">
+  <!-- Grid -->
+  <SvgGrid
+    gridWidth={frame.width}
+    gridHeight={frame.height}
+    showLabels={showCoordinates}
+    {svgCalcParams}
+  />
 
-    <!-- Snakes -->
-    {#if $highlightedSnakeID}
-      <!-- Draw non-highlighted snakes under the highlighted one -->
-      {#each $playbackState.frame.snakes as snake}
-        {#if snake.id !== $highlightedSnakeID}
-          <SvgSnake {snake} {svgCalcParams} opacity={0.1} />
-        {:else}
-          <SvgSnake {snake} {svgCalcParams} />
-        {/if}
-      {/each}
-    {:else}
-      <!-- Draw eliminated snakes under the alive ones -->
-      {#each $playbackState.frame.snakes as snake}
+  <!-- Snakes -->
+  {#if highlightedSnakeID}
+    <!-- Draw non-highlighted snakes under the highlighted one -->
+    {#each frame.snakes as snake}
+      {#if snake.id !== highlightedSnakeID}
+        <SvgSnake {snake} {svgCalcParams} opacity={0.1} />
+      {:else}
         <SvgSnake {snake} {svgCalcParams} />
-      {/each}
-    {/if}
-
-    <!-- Hazards -->
-    {#each $playbackState.frame.hazards as hazard, i}
-      <SvgHazard point={hazard} key={`${i}`} {svgCalcParams} />
+      {/if}
     {/each}
-
-    <!-- Food -->
-    {#each $playbackState.frame.food as food, i}
-      <SvgFood point={food} key={`${i}`} {svgCalcParams} />
+  {:else}
+    <!-- Draw eliminated snakes under the alive ones -->
+    {#each frame.snakes as snake}
+      <SvgSnake {snake} {svgCalcParams} />
     {/each}
-  </svg>
-{/if}
+  {/if}
+
+  <!-- Hazards -->
+  {#each frame.hazards as hazard, i}
+    <SvgHazard point={hazard} key={`${i}`} {svgCalcParams} />
+  {/each}
+
+  <!-- Food -->
+  {#each frame.food as food, i}
+    <SvgFood point={food} key={`${i}`} {svgCalcParams} />
+  {/each}
+</svg>
 
 <style lang="postcss">
     /* Add a minimal drop shadow to food and snakes */

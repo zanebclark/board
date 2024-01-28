@@ -15,13 +15,11 @@ export type RequestSnake = {
   health: number;
   body: Point[];
   latency: string;
-  head: Point;
   length: number;
-  shout: string;
   customizations: SnakeCustomizations;
 };
 
-export type Snake = Omit<RequestSnake, "shout" | "customizations" | "head"> & {
+export type Snake = Omit<RequestSnake, "shout" | "customizations"> & {
   head: string;
   color: string;
   tail: string;
@@ -35,6 +33,7 @@ export type Frame = {
   food: Point[];
   hazards: Point[];
   isFinalFrame: boolean;
+  descendents?: Frame[];
 };
 
 export type RoyaleSettings = {
@@ -75,6 +74,7 @@ export type Request = {
   turn: number;
   board: Board;
   you: RequestSnake;
+  descendents?: Request[];
 }
 
 export type PlaybackHandler = () => void;
@@ -88,7 +88,7 @@ export type PlaybackState = {
 /* eslint-disable-next-line  @typescript-eslint/no-explicit-any */
 type EngineObject = any;
 
-export function JsonToFrame(
+export function jsonToFrame(
   requestInfo: Request
 ): Frame {
   const coordsToPoint = function(coords: EngineObject): Point {
@@ -118,6 +118,7 @@ export function JsonToFrame(
     snakes: requestInfo.board.snakes.map(requestSnakeToSnake),
     food: requestInfo.board.food.map(coordsToPoint),
     hazards: requestInfo.board.hazards.map(coordsToPoint),
-    isFinalFrame: false
+    isFinalFrame: false,
+    descendents: requestInfo.descendents?.map(jsonToFrame)
   };
 }
