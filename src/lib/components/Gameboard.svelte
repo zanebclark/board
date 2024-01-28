@@ -60,11 +60,7 @@
     {:else}
       <!-- Draw eliminated snakes under the alive ones -->
       {#each $playbackState.frame.snakes as snake}
-        {#if snake.isEliminated}
-          <SvgSnake {snake} {svgCalcParams} opacity={0.1} />
-        {:else}
-          <SvgSnake {snake} {svgCalcParams} />
-        {/if}
+        <SvgSnake {snake} {svgCalcParams} />
       {/each}
     {/if}
 

@@ -27,7 +27,6 @@
   {#each sortedSnakes as snake}
     <div
       class="p-2 cursor-pointer rounded-sm border-solid border-2 border-transparent hover:border-neutral-500 hover:bg-neutral-200 dark:hover:bg-neutral-800"
-      class:eliminated={snake.isEliminated}
       class:highlighted={snake.id === $highlightedSnakeID}
       on:click={() => highlightSnake(snake.id)}
       role="presentation"
@@ -54,9 +53,6 @@
 <style lang="postcss">
   .text-outline {
     text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
-  }
-  .eliminated {
-    @apply text-neutral-500;
   }
   .highlighted {
     @apply border-pink-500 bg-neutral-200;
