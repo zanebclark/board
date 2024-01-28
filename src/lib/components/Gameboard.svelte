@@ -18,13 +18,13 @@
 
   $: svgWidth = $playbackState
     ? 2 * GRID_BORDER +
-      $playbackState.frame.width * CELL_SIZE +
-      Math.max($playbackState.frame.width - 1, 0) * CELL_SPACING
+    $playbackState.frame.width * CELL_SIZE +
+    Math.max($playbackState.frame.width - 1, 0) * CELL_SPACING
     : 0;
   $: svgHeight = $playbackState
     ? 2 * GRID_BORDER +
-      $playbackState.frame.height * CELL_SIZE +
-      Math.max($playbackState.frame.height - 1, 0) * CELL_SPACING
+    $playbackState.frame.height * CELL_SIZE +
+    Math.max($playbackState.frame.height - 1, 0) * CELL_SPACING
     : 0;
 
   $: svgCalcParams = {
@@ -53,10 +53,7 @@
       {#each $playbackState.frame.snakes as snake}
         {#if snake.id !== $highlightedSnakeID}
           <SvgSnake {snake} {svgCalcParams} opacity={0.1} />
-        {/if}
-      {/each}
-      {#each $playbackState.frame.snakes as snake}
-        {#if snake.id === $highlightedSnakeID}
+        {:else}
           <SvgSnake {snake} {svgCalcParams} />
         {/if}
       {/each}
@@ -65,10 +62,7 @@
       {#each $playbackState.frame.snakes as snake}
         {#if snake.isEliminated}
           <SvgSnake {snake} {svgCalcParams} opacity={0.1} />
-        {/if}
-      {/each}
-      {#each $playbackState.frame.snakes as snake}
-        {#if !snake.isEliminated}
+        {:else}
           <SvgSnake {snake} {svgCalcParams} />
         {/if}
       {/each}
@@ -87,8 +81,8 @@
 {/if}
 
 <style lang="postcss">
-  /* Add a minimal drop shadow to food and snakes */
-  :global(svg.gameboard .food, svg.gameboard .snake) {
-    filter: drop-shadow(0.1em 0.1em 0.05em rgba(0, 0, 0, 0.3));
-  }
+    /* Add a minimal drop shadow to food and snakes */
+    :global(svg.gameboard .food, svg.gameboard .snake) {
+        filter: drop-shadow(0.1em 0.1em 0.05em rgba(0, 0, 0, 0.3));
+    }
 </style>

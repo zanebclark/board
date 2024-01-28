@@ -3,26 +3,28 @@ export type Point = {
   y: number;
 };
 
-export type Elimination = {
-  turn: number;
-  cause: string;
-  by: string;
-};
+export type SnakeCustomizations = {
+  color?: string;
+  head?: string;
+  tail?: string;
+}
 
-export type Snake = {
+export type RequestSnake = {
   id: string;
   name: string;
-  author: string;
-  color: string;
-  head: string;
-  tail: string;
   health: number;
-  latency: number;
   body: Point[];
+  latency: string;
+  head: Point;
   length: number;
-  elimination: Elimination | null;
-  // Helpers
-  isEliminated: boolean;
+  shout: string;
+  customizations: SnakeCustomizations;
+};
+
+export type Snake = Omit<RequestSnake, "shout" | "customizations" | "head"> & {
+  head: string;
+  color: string;
+  tail: string;
 };
 
 export type Frame = {
@@ -35,16 +37,50 @@ export type Frame = {
   isFinalFrame: boolean;
 };
 
-export enum PlaybackMode {
-  PAUSED,
-  PLAYING
+export type RoyaleSettings = {
+  shrinkEveryNTurns: number;
+}
+
+export type RulesetSettings = {
+  foodSpawnChance: number;
+  minimumFood: number;
+  hazardDamagePerTurn: number;
+  royale?: RoyaleSettings;
+}
+
+export type Ruleset = {
+  name: string;
+  version: string;
+  settings: RulesetSettings;
+}
+
+export type Game = {
+  id: string;
+  ruleset: Ruleset;
+  map: string;
+  timeout: number;
+  source: string;
+}
+
+export type Board = {
+  height: number;
+  width: number;
+  food: Point[];
+  hazards: Point[];
+  snakes: RequestSnake[];
+}
+
+export type Request = {
+  game: Game;
+  turn: number;
+  board: Board;
+  you: RequestSnake;
 }
 
 export type PlaybackHandler = () => void;
 
 export type PlaybackState = {
   frame: Frame;
-  mode: PlaybackMode;
   finalFrame: null | Frame;
 };
 
@@ -52,47 +88,36 @@ export type PlaybackState = {
 /* eslint-disable-next-line  @typescript-eslint/no-explicit-any */
 type EngineObject = any;
 
-export function engineEventToFrame(
-  engineGameInfo: EngineObject,
-  engineGameEvent: EngineObject
+export function JsonToFrame(
+  requestInfo: Request
 ): Frame {
-  const engineCoordsToPoint = function (engineCoords: EngineObject): Point {
-    return { x: engineCoords.X, y: engineCoords.Y };
+  const coordsToPoint = function(coords: EngineObject): Point {
+    return { x: coords.x, y: coords.y };
   };
 
-  const engineSnakeToSnake = function (engineSnake: EngineObject): Snake {
+  const requestSnakeToSnake = function(snake: RequestSnake): Snake {
     return {
       // Fixed properties
-      id: engineSnake.ID,
-      name: engineSnake.Name,
-      author: engineSnake.Author,
-      color: engineSnake.Color,
-      head: engineSnake.HeadType,
-      tail: engineSnake.TailType,
+      id: snake.id,
+      name: snake.name,
+      color: snake.customizations.color || "default",
+      head: snake.customizations.head || "default",
+      tail: snake.customizations.tail || "default",
       // Frame specific
-      health: engineSnake.Health,
-      latency: engineSnake.Latency,
-      body: engineSnake.Body.map(engineCoordsToPoint),
-      length: engineSnake.Body.length,
-      elimination: engineSnake.Death
-        ? {
-            turn: engineSnake.Death.Turn,
-            cause: engineSnake.Death.Cause,
-            by: engineSnake.Death.EliminatedBy
-          }
-        : null,
-      // Helpers
-      isEliminated: engineSnake.Death != null
+      health: snake.health,
+      latency: snake.latency,
+      body: snake.body.map(coordsToPoint),
+      length: snake.length
     };
   };
 
   return {
-    turn: engineGameEvent.Turn,
-    width: engineGameInfo.Game.Width,
-    height: engineGameInfo.Game.Height,
-    snakes: engineGameEvent.Snakes.map(engineSnakeToSnake),
-    food: engineGameEvent.Food.map(engineCoordsToPoint),
-    hazards: engineGameEvent.Hazards.map(engineCoordsToPoint),
+    turn: requestInfo.turn,
+    width: requestInfo.board.width,
+    height: requestInfo.board.height,
+    snakes: requestInfo.board.snakes.map(requestSnakeToSnake),
+    food: requestInfo.board.food.map(coordsToPoint),
+    hazards: requestInfo.board.hazards.map(coordsToPoint),
     isFinalFrame: false
   };
 }

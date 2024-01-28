@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import { goto } from "$app/navigation";
+  import { beforeNavigate, goto } from "$app/navigation";
 
   import { keybind } from "$lib/actions/keybind";
   import { tooltip } from "$lib/actions/tooltip";
@@ -36,6 +36,11 @@
     }
   };
 
+  beforeNavigate(async () => {
+    playbackState.controls.pause();
+    playbackState.reset();
+  });
+
   function navigateToSettings() {
     goto("/settings");
   }
@@ -65,7 +70,7 @@
   use:keybind={{ keys: [","], f: navigateToSettings }}
 />
 
-<div use:resize={{ f: onResize }} class="h-full w-full flex flex-col items-center justify-center">
+<div use:resize={{ f: onResize }} class="h-full w-full flex flex-row items-center justify-center">
   {#if settingError}
     <p class="p-4 font-bold text-lg text-center">
       To display a game you need to specify the ID in the URL.
@@ -80,7 +85,12 @@
   {:else if $playbackState}
     <TooltipTemplateHotkeys id={helpTooltipOptions.templateId} />
     <TooltipTemplateSettings id={settingsTooltipOptions.templateId} {settings} />
-    <div class="w-full h-full flex flex-col md:flex-row">
+    <div class="w-full h-full flex flex-col" style="max-width:300px; background:#f1f1f1">
+      {#if settings.showScoreboard}
+        <div class="basis-[45%] order-first p-2">
+          <Scoreboard />
+        </div>
+      {/if}
       <div class="flex flex-col grow">
         {#if settings.title}
           <h1 class="text-center font-bold pt-2 text-lg">{settings.title}</h1>
@@ -99,12 +109,9 @@
           </div>
         {/if}
       </div>
-      {#if settings.showScoreboard}
-        <div class="basis-full md:basis-[45%] order-first p-2 md:order-last">
-          <Scoreboard />
-        </div>
-      {/if}
+
     </div>
+
   {:else}
     <p class="p-4 text-lg text-center">Loading game...</p>
   {/if}

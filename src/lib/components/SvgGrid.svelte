@@ -17,7 +17,7 @@
     {#each { length: gridHeight } as _, y}
       <rect
         id={`grid-${x}-${y}`}
-        class="grid fill-[#f1f1f1] dark:fill-[#393939]"
+        class="grid fill-[#dbdee3] dark:fill-[#393939]"
         {...svgCalcCellRect(svgCalcParams, { x, y })}
       />
     {/each}

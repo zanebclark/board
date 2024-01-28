@@ -50,19 +50,12 @@
     return "";
   }
 
-  // If the snake is eliminated by self collision we give its head
-  // a drop shadow for dramatic effect.
-  $: drawHeadShadow = calcDrawHeadShadow(snake);
-  function calcDrawHeadShadow(snake: Snake): boolean {
-    return snake.isEliminated && snake.elimination?.cause == "snake-self-collision";
-  }
 </script>
 
 {#await fetchCustomizationSvgDef("head", snake.head) then headSvgDef}
   {#if drawHead}
     <svg
       class="head {headDirection}"
-      class:shadow={drawHeadShadow}
       viewBox="0 0 100 100"
       fill={snake.color}
       {...headRectProps}
@@ -75,19 +68,3 @@
   {/if}
 {/await}
 
-<style lang="postcss">
-  /* Offset shadows in the direction the head is
-	   facing to avoid drawing shadow over the body */
-  svg.head.up.shadow {
-    filter: drop-shadow(0 -0.4rem 0.2rem rgba(0, 0, 0, 0.3));
-  }
-  svg.head.down.shadow {
-    filter: drop-shadow(0 0.4rem 0.2rem rgba(0, 0, 0, 0.3));
-  }
-  svg.head.left.shadow {
-    filter: drop-shadow(-0.4rem 0 0.2rem rgba(0, 0, 0, 0.3));
-  }
-  svg.head.right.shadow {
-    filter: drop-shadow(0.4rem 0 0.2rem rgba(0, 0, 0, 0.3));
-  }
-</style>
