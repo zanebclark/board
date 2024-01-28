@@ -1,7 +1,4 @@
 import { writable } from "svelte/store";
-
-import { type Settings, getDefaultSettings } from "$lib/settings/stores";
-
 import { fetchGameFromJson } from "./engine";
 import type { Frame, PlaybackState } from "./types";
 
@@ -25,8 +22,7 @@ const onFrameLoad = (frame: Frame) => {
 function createPlaybackState() {
   return {
     subscribe: writableState.subscribe,
-    load: (s: Settings) => {
-      settings = { ...s };
+    load: () => {
       fetchGameFromJson(onFrameLoad);
     },
     reset
