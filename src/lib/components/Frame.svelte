@@ -6,14 +6,8 @@
   export let showScoreboard: boolean;
   export let showCoordinates: boolean;
   export let frame: Frame;
-  console.log(frame);
-
   let highlightedSnakeID: string | null = null;
-  export let visible: boolean = true;
-
-  function toggleVisible() {
-    visible = !visible;
-  }
+  export let visible = false;
 </script>
 
 <div class="items-center justify-center">
