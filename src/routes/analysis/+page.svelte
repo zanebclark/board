@@ -63,7 +63,6 @@
 <svelte:window
   use:keybind={{ keys: [","], f: navigateToSettings }}
 />
-
 <div use:resize={{ f: onResize }} class="h-full w-full flex flex-row items-center justify-center">
   {#if settingError}
     <p class="p-4 font-bold text-lg text-center">

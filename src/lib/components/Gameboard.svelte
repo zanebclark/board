@@ -54,6 +54,13 @@
   {:else}
     <!-- Draw eliminated snakes under the alive ones -->
     {#each frame.snakes as snake}
+      {#each frame.descendents || [] as descendent}
+        {#each descendent.snakes as future_snake}
+          {#if future_snake.id === snake.id}
+            <SvgSnake snake={future_snake} {svgCalcParams} opacity={0.2} />
+          {/if}
+        {/each}
+      {/each}
       <SvgSnake {snake} {svgCalcParams} />
     {/each}
   {/if}
