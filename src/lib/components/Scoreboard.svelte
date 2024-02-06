@@ -5,7 +5,7 @@
   export let highlightedSnakeID: string | null;
 
   // We sort snakes by elimination state, then lowercase name alphabetical
-  $: sortedSnakes = [...frame.snakes].sort((a, b) => {
+  $: sortedSnakes = [...frame.snakes.values()].sort((a, b) => {
     return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
   });
 

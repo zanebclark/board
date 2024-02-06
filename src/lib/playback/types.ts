@@ -29,7 +29,7 @@ export type Frame = {
   turn: number;
   width: number;
   height: number;
-  snakes: Snake[];
+  snakes: Map<string, Snake>;
   food: Point[];
   hazards: Point[];
   isFinalFrame: boolean;
@@ -95,8 +95,8 @@ export function jsonToFrame(
     return { x: coords.x, y: coords.y };
   };
 
-  const requestSnakeToSnake = function(snake: RequestSnake): Snake {
-    return {
+  const requestSnakeToSnake = function(snake: RequestSnake): [string, Snake] {
+    return [snake.id, {
       // Fixed properties
       id: snake.id,
       name: snake.name,
@@ -108,14 +108,14 @@ export function jsonToFrame(
       latency: snake.latency,
       body: snake.body.map(coordsToPoint),
       length: snake.length
-    };
+    }];
   };
 
   return {
     turn: requestInfo.turn,
     width: requestInfo.board.width,
     height: requestInfo.board.height,
-    snakes: requestInfo.board.snakes.map(requestSnakeToSnake),
+    snakes: new Map(requestInfo.board.snakes.map(requestSnakeToSnake)),
     food: requestInfo.board.food.map(coordsToPoint),
     hazards: requestInfo.board.hazards.map(coordsToPoint),
     isFinalFrame: false,

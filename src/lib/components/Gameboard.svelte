@@ -44,24 +44,17 @@
   <!-- Snakes -->
   {#if highlightedSnakeID}
     <!-- Draw non-highlighted snakes under the highlighted one -->
-    {#each frame.snakes as snake}
-      {#if snake.id !== highlightedSnakeID}
-        <SvgSnake {snake} {svgCalcParams} opacity={0.1} />
+    {#each [...frame.snakes.keys()] as snake_id}
+      {#if snake_id !== highlightedSnakeID}
+        <SvgSnake {snake_id} {frame} {svgCalcParams} opacity={0.1} />
       {:else}
-        <SvgSnake {snake} {svgCalcParams} />
+        <SvgSnake {snake_id} {frame} {svgCalcParams} isHighlighted={true} />
       {/if}
     {/each}
   {:else}
     <!-- Draw eliminated snakes under the alive ones -->
-    {#each frame.snakes as snake}
-      {#each frame.descendents || [] as descendent}
-        {#each descendent.snakes as future_snake}
-          {#if future_snake.id === snake.id}
-            <SvgSnake snake={future_snake} {svgCalcParams} opacity={0.2} />
-          {/if}
-        {/each}
-      {/each}
-      <SvgSnake {snake} {svgCalcParams} />
+    {#each [...frame.snakes.keys()] as snake_id}
+      <SvgSnake {snake_id} {frame} {svgCalcParams} />
     {/each}
   {/if}
 
